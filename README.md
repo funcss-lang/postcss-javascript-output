@@ -6,22 +6,27 @@
 [ci-img]:  https://travis-ci.org/funcss-lang/postcss-javascript-output.svg
 [ci]:      https://travis-ci.org/funcss-lang/postcss-javascript-output
 
-```css
-.foo {
-    /* Input example */
-}
-```
+`postcss-javascript-output` enables you to write plugins like this:
 
-```css
-.foo {
-  /* Output example */
-}
+```js
+module.exports = postcss.plugin('postcss-helloworld', function () {
+    return function (css, result) {
+        result.addJS("console.log('Hello world')");
+    };
+});
 ```
 
 ## Usage
 
 ```js
-postcss([ require('postcss-javascript-output') ])
+var postcss = require('postcss');
+postcss([ require('postcss-javascript-output')(), require('postcss-helloworld')() ])
+    .process(css, { from: 'src/app.css', to: 'app.css' })
+    .then(function (result) {
+        fs.writeFileSync('app.css', result.css);
+        if ( result.js ) fs.writeFileSync('app.js', result.js);
+        if ( result.map ) fs.writeFileSync('app.css.map', result.map);
+    });
 ```
 
 See [PostCSS] docs for examples for your environment.
