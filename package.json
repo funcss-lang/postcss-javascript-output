@@ -1,0 +1,33 @@
+{
+  "name": "postcss-javascript-output",
+  "version": "0.0.0",
+  "description": "PostCSS plugin that can be used by other plugins for outputting JavaScript code",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "javascript"
+  ],
+  "author": "Bernát Kalló <kallo.bernat@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cie/postcss-javascript-output.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cie/postcss-javascript-output/issues"
+  },
+  "homepage": "https://github.com/cie/postcss-javascript-output",
+  "dependencies": {
+    "postcss": "^4.1.13"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^0.14.0",
+    "gulp-mocha": "^2.1.2"
+  },
+  "scripts": {
+    "test": "gulp"
+  }
+}
