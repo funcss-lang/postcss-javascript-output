@@ -3,8 +3,8 @@
 [PostCSS] plugin that can be used by other plugins for outputting JavaScript code.
 
 [PostCSS]: https://github.com/postcss/postcss
-[ci-img]:  https://travis-ci.org/cie/postcss-javascript-output.svg
-[ci]:      https://travis-ci.org/cie/postcss-javascript-output
+[ci-img]:  https://travis-ci.org/funcss-lang/postcss-javascript-output.svg
+[ci]:      https://travis-ci.org/funcss-lang/postcss-javascript-output
 
 ```css
 .foo {
